@@ -101,7 +101,6 @@ LinkedList::~LinkedList() {
  * Append a new bid to the end of the list
  */
 void LinkedList::Append(Bid bid) {
-    // FIXME (2): Implement append logic
     //Create new node
 	Node* newNode = new Node(bid);
     //if there is nothing at the head...
@@ -124,15 +123,22 @@ void LinkedList::Append(Bid bid) {
  * Prepend a new bid to the start of the list
  */
 void LinkedList::Prepend(Bid bid) {
-    // FIXME (3): Implement prepend logic
     // Create new node
-
-    // if there is already something at the head...
-        // new node points to current head as its next node
-
-    // head now becomes the new node
+    Node* newNode = new Node(bid);
+	// if the list is empty
+	if (head == nullptr) {
+		// new node becomes the head and the tail
+		head = newNode;
+		tail = newNode;
+    }
+	else {
+		// make the new node point to the head
+		newNode->next = head;
+        // head now becomes the new node
+		head = newNode;
+    }
     //increase size count
-
+    size++;
 }
 
 /**
