@@ -127,7 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CSVparser.cpp" />
     <ClCompile Include="LinkedList.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CSVparser.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="eBid_Monthly_Sales.csv" />
+    <None Include="eBid_Monthly_Sales_Dec_2016.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="License.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
